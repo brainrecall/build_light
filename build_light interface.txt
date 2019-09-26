@@ -1,0 +1,33 @@
+The build_light Arduino project uses a simple single-character interface. These characters are read
+from the Arduino serial port, which is at 115200 baud. Simply open the serial port, and send the
+characters described here.
+
+The build_light has a global blink mode. This blink mode defines how build_light will operate
+any light that is turned on. The blink mode will be used for all future light activations until
+the blink mode is changed. When a light is commanded off, it will remain off until turned on. When
+turned on the light will acquire the last commanded blink mode.
+
+Multiple commands can be chained into a single string if desired. They will be processed in the
+order they are received.
+
+Light Commands:
+A - all lights on
+a - all lights off (default at power on)
+R - red light on
+r - red light off
+Y - yellow light on
+y - yellow light off
+G - green light on
+g - green light off
+
+Blink Modes:
+f - fast blink mode
+m - medium blink mode
+s - slow blink mode
+n - no blinking (default at power on)
+
+Example, green light constantly on:
+anG
+
+Example, blink the red light fast, yellow light slow, send:
+afRsY

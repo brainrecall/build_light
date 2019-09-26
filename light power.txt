@@ -1,0 +1,6 @@
+
+(red) red light control line
+(yellow) yellow light control line
+(green) green light control line
+(purple) buzzer control line
+(gray) power input line connected to the positive power supply
