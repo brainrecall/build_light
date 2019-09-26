@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name light_tower)(type Legacy)(uri ${KIPRJMOD}/light_tower.lib)(options "")(descr ""))
+)
