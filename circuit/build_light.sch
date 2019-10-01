@@ -37,17 +37,6 @@ F 3 "" H 6500 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+12V #PWR06
-U 1 1 5D7CF0A5
-P 6400 2850
-F 0 "#PWR06" H 6400 2700 50  0001 C CNN
-F 1 "+12V" H 6415 3023 50  0000 C CNN
-F 2 "" H 6400 2850 50  0001 C CNN
-F 3 "" H 6400 2850 50  0001 C CNN
-	1    6400 2850
-	1    0    0    -1  
-$EndComp
-$Comp
 L light_tower:TOWER U1
 U 1 1 5D7CFFD9
 P 3800 3750
@@ -157,17 +146,6 @@ F 3 "~" H 5450 4500 50  0001 C CNN
 	1    5450 4500
 	0    -1   -1   0   
 $EndComp
-$Comp
-L power:+12V #PWR01
-U 1 1 5D7D7F5C
-P 4250 3800
-F 0 "#PWR01" H 4250 3650 50  0001 C CNN
-F 1 "+12V" H 4265 3973 50  0000 C CNN
-F 2 "" H 4250 3800 50  0001 C CNN
-F 3 "" H 4250 3800 50  0001 C CNN
-	1    4250 3800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4950 3300 4950 3350
 Wire Wire Line
@@ -198,8 +176,6 @@ Wire Wire Line
 	4500 2900 4500 4050
 Wire Wire Line
 	4500 4050 4200 4050
-Wire Wire Line
-	6400 2850 6400 3150
 Wire Wire Line
 	6500 5350 6500 5400
 Wire Wire Line
@@ -258,8 +234,49 @@ Wire Wire Line
 Wire Wire Line
 	7700 5350 6600 5350
 Connection ~ 6600 5350
+$Comp
+L light_tower:buck_boost U?
+U 1 1 5D92E78D
+P 6300 1900
+F 0 "U?" H 6500 1965 50  0000 C CNN
+F 1 "buck_boost" H 6500 1874 50  0000 C CNN
+F 2 "" H 6300 1900 50  0001 C CNN
+F 3 "" H 6300 1900 50  0001 C CNN
+	1    6300 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D92F05E
+P 7100 2550
+F 0 "#PWR?" H 7100 2300 50  0001 C CNN
+F 1 "GND" H 7105 2377 50  0000 C CNN
+F 2 "" H 7100 2550 50  0001 C CNN
+F 3 "" H 7100 2550 50  0001 C CNN
+	1    7100 2550
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	4200 3950 4250 3950
+	5900 2300 5900 2500
 Wire Wire Line
-	4250 3950 4250 3800
+	5900 2500 7100 2500
+Wire Wire Line
+	7100 2500 7100 2300
+Wire Wire Line
+	7100 2500 7100 2550
+Connection ~ 7100 2500
+Wire Wire Line
+	6700 3150 6700 2750
+Wire Wire Line
+	6700 2750 5750 2750
+Wire Wire Line
+	5750 2750 5750 2100
+Wire Wire Line
+	5750 2100 5900 2100
+Wire Wire Line
+	7100 2100 7100 1750
+Wire Wire Line
+	7100 1750 4200 1750
+Wire Wire Line
+	4200 1750 4200 3950
 $EndSCHEMATC
