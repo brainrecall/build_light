@@ -1,5 +1,7 @@
 # build_light
-A software build light indicator using Arduino.
+A software build light indicator using Arduino. For background, see here: https://en.wikipedia.org/wiki/Build_light_indicator
+
+
 
 The circuit is located in the circuit folder, built with KiCAD 5.1.4, but I also included a PDF of it.
 The code is written in the Arduino IDE, version 1.8.9 as of this writing, and is located in this directory.
